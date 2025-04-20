@@ -15,7 +15,7 @@ const SearchItems = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const res = await axios.get('https://lost-found-sooty.vercel.app/api/items', {
+        const res = await axios.get('https://lost-found-9yoj.onrender.com/api/items', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -32,7 +32,7 @@ const SearchItems = () => {
   const handleNotify = async (itemId) => {
     try {
       await axios.post(
-        `http://localhost:5000/api/items/notify/${itemId}`,
+        `https://lost-found-9yoj.onrender.com/api/items/notify/${itemId}`,
         {},
         {
           headers: {

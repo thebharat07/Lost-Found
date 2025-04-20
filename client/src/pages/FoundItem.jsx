@@ -60,7 +60,7 @@ const FoundItem = () => {
   const handleNotify = async (lostItemId) => {
     try {
       await axios.post(
-        `https://lost-found-sooty.vercel.app/api/items/notify/${lostItemId}`,
+        `https://lost-found-9yoj.onrender.com/api/items/notify/${lostItemId}`,
         {},
         {
           headers: {
