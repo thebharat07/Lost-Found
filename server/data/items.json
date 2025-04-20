@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1744359330367,
+    "userId": 1744359257012,
+    "title": "mobiile",
+    "description": "vivo",
+    "category": "mobiles",
+    "location": "gvp college",
+    "imageUrl": "https://res.cloudinary.com/deasmiprq/image/upload/v1744359327/qnrwadou3bn5i4yysdgc.jpg",
+    "type": "lost",
+    "date": "2025-04-11T08:15:30.367Z"
+  },
+  {
+    "id": 1744360576787,
+    "userId": 1744360348835,
+    "title": "wallet",
+    "description": "black colour",
+    "category": "wallet",
+    "location": "kommadi",
+    "imageUrl": "https://res.cloudinary.com/deasmiprq/image/upload/v1744360574/zuttco1dsfbfpf86x1ow.jpg",
+    "type": "lost",
+    "date": "2025-04-11T08:36:16.787Z"
+  }
+
+]

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: custom global styles */
+body {
+  @apply bg-lightGray text-darkGray font-sans;
+}
+
+/* Smooth transition for route/page changes */
+.page-enter {
+  @apply opacity-0 scale-95;
+}
+.page-enter-active {
+  @apply opacity-100 scale-100 transition-transform transition-opacity duration-400;
+}
+.page-exit {
+  @apply opacity-100 scale-100;
+}
+.page-exit-active {
+  @apply opacity-0 scale-95 transition-transform transition-opacity duration-400;
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #94a3b8;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b;
+}

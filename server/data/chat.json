@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1745078607775,
+    "fromUserId": 1745071379375,
+    "toUserId": 1744786660582,
+    "message": "Hi",
+    "timestamp": "2025-04-19T16:03:27.775Z"
+  },
+  {
+    "id": 1745078703645,
+    "fromUserId": 1745071379375,
+    "toUserId": 1744786660582,
+    "message": "hello",
+    "timestamp": "2025-04-19T16:05:03.645Z"
+  },
+  {
+    "id": 1745078727140,
+    "fromUserId": 1745071379375,
+    "toUserId": 1744786660582,
+    "message": "Vanakam",
+    "timestamp": "2025-04-19T16:05:27.140Z"
+  },
+  {
+    "id": 1745078730681,
+    "fromUserId": 1744786660582,
+    "toUserId": 1745071379375,
+    "message": "jak",
+    "timestamp": "2025-04-19T16:05:30.681Z"
+  },
+  {
+    "id": 1745078832928,
+    "fromUserId": 1745071379375,
+    "toUserId": 1744786660582,
+    "message": "kjf",
+    "timestamp": "2025-04-19T16:07:12.928Z"
+  }
+]
