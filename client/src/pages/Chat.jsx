@@ -15,7 +15,7 @@ const Chat = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users', {
+      const res = await axios.get('https://lost-found-sooty.vercel.app/api/users', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
@@ -26,7 +26,7 @@ const Chat = () => {
 
   const fetchMessages = async (receiverId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/chats/${receiverId}`, {
+      const res = await axios.get(`https://lost-found-sooty.vercel.app/api/chats/${receiverId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setChat(res.data);
@@ -41,7 +41,7 @@ const Chat = () => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/chats',
+        'https://lost-found-sooty.vercel.app/api/chats',
         { toUserId: recipientId, message },
         { headers: { Authorization: `Bearer ${token}` } }
       );

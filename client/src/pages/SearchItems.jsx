@@ -15,7 +15,7 @@ const SearchItems = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/items', {
+        const res = await axios.get('https://lost-found-sooty.vercel.app/api/items', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -60,7 +60,7 @@ const FoundItem = () => {
   const handleNotify = async (lostItemId) => {
     try {
       await axios.post(
-        `http://localhost:5000/api/items/notify/${lostItemId}`,
+        `https://lost-found-sooty.vercel.app/api/items/notify/${lostItemId}`,
         {},
         {
           headers: {
@@ -97,7 +97,7 @@ const FoundItem = () => {
 
       const finalData = { ...formData, imageUrl };
 
-      const response = await axios.post('http://localhost:5000/api/items/found', finalData, {
+      const response = await axios.post('https://lost-found-sooty.vercel.app/api/items/found', finalData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',

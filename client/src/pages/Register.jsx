@@ -25,7 +25,7 @@ const Register = () => {
     setSuccess('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', form);
+      const res = await axios.post('https://lost-found-sooty.vercel.app/api/auth/register', form);
       setSuccess('Registration successful! Redirecting to login...');
       setTimeout(() => navigate('/login'), 1500);
     } catch (err) {
