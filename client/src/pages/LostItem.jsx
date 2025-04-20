@@ -102,11 +102,13 @@ const LostItem = () => {
     <div className="flex min-h-screen bg-gray-100">
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="flex-1 p-6 overflow-y-auto">
-          <h1 className="text-3xl font-bold mb-6">Post Lost Item</h1>
+        <main className="flex-1 p-4 sm:p-6 overflow-y-auto">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center sm:text-left">
+            Post Lost Item
+          </h1>
           <form
             onSubmit={handleSubmit}
-            className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md"
+            className="w-full max-w-xl mx-auto bg-white p-4 sm:p-6 rounded-lg shadow-md"
           >
             <div className="mb-4">
               <label className="block text-gray-700 font-medium mb-2">Title</label>
@@ -116,9 +118,10 @@ const LostItem = () => {
                 value={formData.title}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded shadow-sm focus:ring-2 focus:ring-primary"
+                className="w-full px-3 py-2 border rounded shadow-sm focus:ring-2 focus:ring-primary text-sm sm:text-base"
               />
             </div>
+  
             <div className="mb-4">
               <label className="block text-gray-700 font-medium mb-2">Description</label>
               <textarea
@@ -126,10 +129,12 @@ const LostItem = () => {
                 value={formData.description}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border rounded shadow-sm focus:ring-2 focus:ring-primary"
+                className="w-full px-3 py-2 border rounded shadow-sm focus:ring-2 focus:ring-primary text-sm sm:text-base"
+                rows="4"
               ></textarea>
             </div>
-            <div className="grid grid-cols-2 gap-4 mb-4">
+  
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Category</label>
                 <input
@@ -138,7 +143,7 @@ const LostItem = () => {
                   value={formData.category}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border rounded shadow-sm"
+                  className="w-full px-3 py-2 border rounded shadow-sm text-sm sm:text-base"
                 />
               </div>
               <div>
@@ -149,36 +154,38 @@ const LostItem = () => {
                   value={formData.location}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border rounded shadow-sm"
+                  className="w-full px-3 py-2 border rounded shadow-sm text-sm sm:text-base"
                 />
               </div>
             </div>
+  
             <div className="mb-4">
               <label className="block text-gray-700 font-medium mb-2">Upload Image</label>
               <input
                 type="file"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-2 border rounded shadow-sm"
+                className="w-full text-sm sm:text-base px-3 py-2 border rounded shadow-sm"
               />
             </div>
-
+  
             <button
               type="submit"
               disabled={uploading}
-              className="bg-primary text-white px-6 py-2 rounded hover:bg-secondary transition"
+              className="w-full sm:w-auto bg-primary text-white px-6 py-2 rounded hover:bg-secondary transition"
             >
               {uploading ? 'Uploading...' : 'Submit Lost Item'}
             </button>
-
-            {success && <p className="mt-4 text-green-600">{success}</p>}
-            {error && <p className="mt-4 text-red-600">{error}</p>}
+  
+            {success && <p className="mt-4 text-green-600 text-sm">{success}</p>}
+            {error && <p className="mt-4 text-red-600 text-sm">{error}</p>}
           </form>
         </main>
         <Footer />
       </div>
     </div>
   );
+  
 };
 
 export default LostItem;

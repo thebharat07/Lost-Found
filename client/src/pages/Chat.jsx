@@ -47,7 +47,6 @@ const Chat = () => {
       );
 
       setMessage('');
-      // Re-fetch messages after sending
       fetchMessages(recipientId);
     } catch (err) {
       console.error('Error sending message:', err);
@@ -78,11 +77,11 @@ const Chat = () => {
     <div className="flex min-h-screen bg-gray-100">
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="flex-1 p-6 overflow-hidden">
+        <main className="flex-1 p-4 sm:p-6 overflow-hidden">
           <h1 className="text-2xl font-semibold mb-4">Chat</h1>
-          <div className="flex h-[500px]">
+          <div className="flex flex-col sm:flex-row h-[500px] bg-white rounded-lg overflow-hidden shadow-sm">
             {/* Users list */}
-            <div className="w-1/4 bg-white border-r p-4 overflow-y-auto">
+            <div className="sm:w-1/4 w-full sm:border-r border-b sm:border-b-0 p-4 overflow-y-auto">
               <h2 className="text-lg font-medium mb-2">Users</h2>
               {users
                 .filter((u) => u.id !== user.id)
@@ -103,7 +102,7 @@ const Chat = () => {
             <div className="flex-1 flex flex-col">
               <div
                 ref={chatBoxRef}
-                className="flex-1 bg-white border-b p-4 overflow-y-auto"
+                className="flex-1 p-4 overflow-y-auto border-t sm:border-t-0 sm:border-b"
               >
                 {recipientId === '' ? (
                   <p className="text-gray-500">Select a user to chat with</p>
@@ -134,7 +133,7 @@ const Chat = () => {
 
               {/* Message input */}
               {recipientId && (
-                <form onSubmit={sendMessage} className="flex items-center gap-2 p-4 bg-white border-t">
+                <form onSubmit={sendMessage} className="flex items-center gap-2 p-4 border-t">
                   <input
                     type="text"
                     className="flex-1 px-4 py-2 border rounded-md shadow-sm focus:ring focus:border-blue-400"

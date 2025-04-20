@@ -6,7 +6,7 @@ const getToken = () => {
 };
 
 const api = axios.create({
-  baseURL: 'https://lost-found-9yoj.onrender.com', // Update this if backend port change shttp://localhost:5000
+  baseURL: 'https://lost-found-9yoj.onrender.com', // Update this if backend port changes http://localhost:5000
   headers: {
     'Content-Type': 'application/json',
   }

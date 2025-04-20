@@ -8,32 +8,38 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col lg:flex-row min-h-screen">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-6 bg-light min-h-screen">
+      <main className="flex-1 p-4 sm:p-6 bg-light min-h-screen ml-0 lg:ml-64">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-dark">Welcome, {user?.name || 'User'}!</h1>
-          <p className="text-gray-600 mt-1">Here’s your dashboard. Use the menu to navigate.</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-dark">Welcome, {user?.name || 'User'}!</h1>
+          <p className="text-gray-600 mt-1 text-sm sm:text-base">
+            Here’s your dashboard. Use the menu to navigate.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {/* Dashboard Cards */}
-          <div className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
-            <h2 className="text-xl font-semibold text-primary mb-2">Search Lost Items</h2>
-            <p className="text-gray-600 mb-4">Look through items posted by others that you may have lost.</p>
+          <div className="p-4 sm:p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
+            <h2 className="text-lg sm:text-xl font-semibold text-primary mb-2">Search Lost Items</h2>
+            <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              Look through items posted by others that you may have lost.
+            </p>
             <button
-              className="px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
+              className="w-full sm:w-auto px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
               onClick={() => navigate('/search')}
             >
               Go to Search
             </button>
           </div>
 
-          <div className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
-            <h2 className="text-xl font-semibold text-primary mb-2">Post Lost/Found Item</h2>
-            <p className="text-gray-600 mb-4">Report a lost item or notify others of a found item.</p>
-            <div className="space-x-3">
+          <div className="p-4 sm:p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
+            <h2 className="text-lg sm:text-xl font-semibold text-primary mb-2">Post Lost/Found Item</h2>
+            <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              Report a lost item or notify others of a found item.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
                 className="px-4 py-2 bg-success text-white rounded-md hover:bg-green-700"
                 onClick={() => navigate('/lost')}
@@ -49,22 +55,26 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
-            <h2 className="text-xl font-semibold text-primary mb-2">Notifications</h2>
-            <p className="text-gray-600 mb-4">Check alerts about items that may belong to you.</p>
+          <div className="p-4 sm:p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
+            <h2 className="text-lg sm:text-xl font-semibold text-primary mb-2">Notifications</h2>
+            <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              Check alerts about items that may belong to you.
+            </p>
             <button
-              className="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600"
+              className="w-full sm:w-auto px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600"
               onClick={() => navigate('/notifications')}
             >
               View Notifications
             </button>
           </div>
 
-          <div className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
-            <h2 className="text-xl font-semibold text-primary mb-2">Chat</h2>
-            <p className="text-gray-600 mb-4">Chat with users who found or lost items.</p>
+          <div className="p-4 sm:p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition duration-300">
+            <h2 className="text-lg sm:text-xl font-semibold text-primary mb-2">Chat</h2>
+            <p className="text-gray-600 mb-4 text-sm sm:text-base">
+              Chat with users who found or lost items.
+            </p>
             <button
-              className="px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600"
+              className="w-full sm:w-auto px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600"
               onClick={() => navigate('/chat')}
             >
               Open Chat

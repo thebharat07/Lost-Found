@@ -13,12 +13,12 @@ const Header = () => {
 
   return (
     <header className="bg-primary text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col justify-between items-center gap-4  ">
         <Link to="/" className="text-2xl font-bold tracking-tight">
           Lost & Found
         </Link>
 
-        <nav className="flex items-center space-x-6 text-sm font-medium">
+        <nav className="flex flex-wrap justify-center sm:justify-end items-center gap-4 text-sm font-medium">
           {isAuthenticated ? (
             <>
               <Link to="/dashboard" className="hover:underline">
@@ -41,7 +41,7 @@ const Header = () => {
               </Link>
               <button
                 onClick={handleLogout}
-                className="bg-white text-primary px-3 py-1 rounded hover:bg-gray-100"
+                className="bg-white text-primary px-3 py-1 rounded hover:bg-gray-100 transition"
               >
                 Logout
               </button>
