@@ -97,7 +97,7 @@ const FoundItem = () => {
 
       const finalData = { ...formData, imageUrl };
 
-      const response = await axios.post('https://lost-found-9yoj.onrender.com./api/items/found', finalData, {
+      const response = await axios.post('https://lost-found-9yoj.onrender.com/api/items/found', finalData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
