@@ -7,9 +7,6 @@ const getToken = () => {
 
 const api = axios.create({
   baseURL: 'https://lost-found-9yoj.onrender.com', // Update this if backend port changes http://localhost:5000
-  headers: {
-    'Content-Type': 'application/json',
-  }
 });
 
 // Add JWT token to Authorization header for all requests
