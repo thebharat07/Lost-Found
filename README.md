@@ -2,8 +2,6 @@
 
 Welcome to the **Lost and Found** project! This application allows users to post items they find, search for lost items, and track their status. The goal is to provide an easy way for people to connect and reclaim lost belongings.
 
-![Lost and Found Preview](https://via.placeholder.com/800x400?text=Lost+and+Found+App+Screenshot)  
-*(Replace with actual screenshot link)*
 
 ## Tech Stack
 
@@ -33,7 +31,7 @@ Welcome to the **Lost and Found** project! This application allows users to post
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/[username]/lost-and-found.git
+git clone https://github.com/thebharat07/lost-and-found.git
 cd lost-and-found
 ```
 
