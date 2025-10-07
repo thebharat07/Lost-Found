@@ -60,7 +60,7 @@ Backend: http://localhost:5000
 # Deployment
 
 A live version of this project is hosted at:
-🔗 https://lost-and-found-demo.vercel.app
+🔗 [Lost & Found](https://lost-found-sooty.vercel.app/)
 
 ---
 
